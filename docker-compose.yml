@@ -4,6 +4,7 @@ services:
     container_name: ${CONTAINER_NAME}-dns
     environment:
       - USE_GENERIC_CACHE=true
+      - LANCACHE_IP=${HOST_IP}
       - UPSTREAM_DNS=${DNS_IP}
     ports:
       - ${HOST_IP}:53:53/udp
