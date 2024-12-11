@@ -17,8 +17,8 @@ services:
     image: lancachenet/monolithic:latest
     container_name: ${CONTAINER_NAME}-monolithic
     ports:
-      - ${HOST_IP}:80:80/tcp
-      - ${HOST_IP}:443:443/tcp
+      - 80:80/tcp
+      - 443:443/tcp
     volumes:
       - ${LANCACHE_PATH}/cache:/data/cache
       - ${LANCACHE_PATH}/logs:/data/logs
